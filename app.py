@@ -38,5 +38,4 @@ def predict():
     return render_template('t.html', prediction_text='The news is "{}"'.format(pred[0]))
     
 if __name__=="__main__":
-    port=int(os.environ.get('PORT',5000))
-    app.run(port=port,debug=True,use_reloader=False)
+    app.run(debug=False,host='0.0.0.0')
